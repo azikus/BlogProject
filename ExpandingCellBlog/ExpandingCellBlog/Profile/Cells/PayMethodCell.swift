@@ -7,8 +7,12 @@
 
 import UIKit
 
-struct PayMethodCellViewModel {
+class PayMethodCellViewModel {
     let image: UIImage?
+    
+    init(image: UIImage?) {
+        self.image = image
+    }
 }
 
 class PayMethodCell: UITableViewCell {

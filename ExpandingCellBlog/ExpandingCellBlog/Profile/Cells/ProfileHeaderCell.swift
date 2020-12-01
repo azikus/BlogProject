@@ -7,20 +7,30 @@
 
 import UIKit
 
-struct ProfileSectionCellViewModel {
-    let titleText: String
-    let cells: [SectionCell]
-    var isExpanded: Bool
-}
-
-enum SectionCell {
+enum CellType {
+    case header(ProfileHeaderCellViewModel)
     case personal(PersonalCellViewModel)
     case payMethod(PayMethodCellViewModel)
     case notification(NotificationCellViewModel)
-    
 }
 
-class ProfileSectionCell: UITableViewCell {
+class ProfileHeaderCellViewModel: Equatable {
+    let titleText: String
+    let cells: [CellType]
+    var isExpanded: Bool
+    
+    init(titleText: String, cells: [CellType], isExpanded: Bool) {
+        self.titleText = titleText
+        self.cells = cells
+        self.isExpanded = isExpanded
+    }
+    
+    static func == (lhs: ProfileHeaderCellViewModel, rhs: ProfileHeaderCellViewModel) -> Bool {
+        return lhs.titleText == rhs.titleText && lhs.cells.count == rhs.cells.count
+    }
+}
+
+class ProfileHeaderCell: UITableViewCell {
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
@@ -69,13 +79,14 @@ class ProfileSectionCell: UITableViewCell {
         }
     }
     
-    func update(viewModel: ProfileSectionCellViewModel) {
+    func update(viewModel: ProfileHeaderCellViewModel, animated: Bool) {
         titleLabel.text = viewModel.titleText
+        if animated {
+            UIView.animate(withDuration: 0.3, animations: {
+                self.arrowImageView.transform = viewModel.isExpanded ? CGAffineTransform(rotationAngle: .pi) : .identity
+            })
+        }
+        arrowImageView.transform = viewModel.isExpanded ? CGAffineTransform(rotationAngle: .pi) : .identity
     }
     
-    func rotateArrowImage() {
-        UIView.animate(withDuration: 0.3, animations: {
-            self.arrowImageView.transform = CGAffineTransform(rotationAngle: .pi)
-        })
-    }
 }

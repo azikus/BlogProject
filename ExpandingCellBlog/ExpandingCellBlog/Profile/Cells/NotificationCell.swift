@@ -7,9 +7,14 @@
 
 import UIKit
 
-struct NotificationCellViewModel {
+class NotificationCellViewModel {
     let titleText: String
     var isEnabled: Bool
+    
+    init(titleText: String, isEnabled: Bool) {
+        self.titleText = titleText
+        self.isEnabled = isEnabled
+    }
 }
 
 class NotificationCell: UITableViewCell {
@@ -66,12 +71,6 @@ class NotificationCell: UITableViewCell {
         self.viewModel = viewModel
         titleLabel.text = viewModel.titleText
         let image: UIImage? = viewModel.isEnabled ? AppAssets.circleSelected.image : AppAssets.circleDeselected.image
-        checkBoxImageView.image = image
-    }
-    
-    func toggleSelection() {
-        viewModel?.isEnabled.toggle()
-        let image: UIImage? = viewModel?.isEnabled ?? true ? AppAssets.circleSelected.image : AppAssets.circleDeselected.image
         checkBoxImageView.image = image
     }
 }

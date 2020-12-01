@@ -22,7 +22,7 @@ class ProfileViewController: UIViewController {
         tableView.dataSource = self
         tableView.separatorStyle = .singleLine
         tableView.backgroundColor = .white
-        tableView.register(ProfileSectionCell.self, forCellReuseIdentifier: ProfileSectionCell.identity)
+        tableView.register(ProfileHeaderCell.self, forCellReuseIdentifier: ProfileHeaderCell.identity)
         tableView.register(PersonalCell.self, forCellReuseIdentifier: PersonalCell.identity)
         tableView.register(PayMethodCell.self, forCellReuseIdentifier: PayMethodCell.identity)
         tableView.register(NotificationCell.self, forCellReuseIdentifier: NotificationCell.identity)
@@ -33,22 +33,7 @@ class ProfileViewController: UIViewController {
         return tableView
     }()
     
-    var dataSource = [ProfileSectionCellViewModel(titleText: "Personal",
-                                                  cells: [.personal(PersonalCellViewModel(titleText: "Username:", descriptionText: "Kresimir")),
-                                                          .personal(PersonalCellViewModel(titleText: "Email:", descriptionText: "kresimir@gmail.com")),
-                                                          .personal(PersonalCellViewModel(titleText: "Password:", descriptionText: "*********")),
-                                                          .personal(PersonalCellViewModel(titleText: "Phone:", descriptionText: "+ 385 99 5656 561")),
-                                                          .personal(PersonalCellViewModel(titleText: "Address:", descriptionText: "Great Windmill Street 43"))],
-                                                  isExpanded: false),
-                      ProfileSectionCellViewModel(titleText: "Payout Method",
-                                                  cells: [.payMethod(PayMethodCellViewModel(image: AppAssets.payPal.image))],
-                                                  isExpanded: false),
-                      ProfileSectionCellViewModel(titleText: "Notifications",
-                                                  cells: [.notification(NotificationCellViewModel(titleText: "Email", isEnabled: false)),
-                                                          .notification(NotificationCellViewModel(titleText: "Push notifications", isEnabled: true)),
-                                                          .notification(NotificationCellViewModel(titleText: "Phone calls", isEnabled: false))],
-                                                  isExpanded: false)
-    ]
+    var dataSource = ProfileDataSource()
     
     init(viewModel: ProfileViewModel) {
         self.viewModel = viewModel
@@ -84,73 +69,74 @@ class ProfileViewController: UIViewController {
     private func observe() {
         
     }
+    
+    private func hideChildCellsForHeader(with indexPath: IndexPath) {
+        let childrenIndexPaths = dataSource.findChildIndexPathsOfHeader(with: indexPath)
+        tableView.deleteRows(at: childrenIndexPaths, with: .fade)
+    }
+    
+    private func showChildCellsForHeader(with indexPath: IndexPath) {
+        let childrenIndexPaths = dataSource.findChildIndexPathsOfHeader(with: indexPath)
+        tableView.insertRows(at: childrenIndexPaths, with: .fade)
+    }
 }
 
 // MARK: - UITableViewDelegate
 
 extension ProfileViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch dataSource.flattenDataSource[indexPath.row] {
+        case .header(let viewModel):
+            if viewModel.isExpanded {
+                viewModel.isExpanded = false
+                dataSource.flatDataSource()
+                hideChildCellsForHeader(with: indexPath)
+            } else {
+                viewModel.isExpanded = true
+                dataSource.flatDataSource()
+                showChildCellsForHeader(with: indexPath)
+            }
+            let clickedCell = tableView.cellForRow(at: indexPath) as? ProfileHeaderCell
+            clickedCell?.update(viewModel: viewModel, animated: true)
+        case .notification(let viewModel):
+            let clickedCell = tableView.cellForRow(at: indexPath) as? NotificationCell
+            viewModel.isEnabled.toggle()
+            clickedCell?.update(viewModel: viewModel)
+        default:
+            break
+        }
+    }
 }
 
 // MARK: - UITableViewDataSource
 
 extension ProfileViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return dataSource.count
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if dataSource[section].isExpanded {
-            return dataSource[section].cells.count + 1
-        } else {
-            return 1
-        }
+        return dataSource.flattenDataSource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
-            let cell: ProfileSectionCell = tableView.dequeueCellAtIndexPath(indexPath: indexPath)
-            cell.update(viewModel: dataSource[indexPath.section])
+        switch dataSource.flattenDataSource[indexPath.row] {
+        case .header(let viewModel):
+            let cell: ProfileHeaderCell = tableView.dequeueCellAtIndexPath(indexPath: indexPath)
+            cell.update(viewModel: viewModel, animated: false)
             return cell
-        } else {
-            switch dataSource[indexPath.section].cells[indexPath.row - 1] {
-            case .personal(let viewModel):
-                let cell: PersonalCell = tableView.dequeueCellAtIndexPath(indexPath: indexPath)
-                cell.update(viewModel: viewModel)
-                return cell
-            case .payMethod(let viewModel):
-                let cell: PayMethodCell = tableView.dequeueCellAtIndexPath(indexPath: indexPath)
-                cell.update(viewModel: viewModel)
-                return cell
-            case .notification(let viewModel):
-                let cell: NotificationCell = tableView.dequeueCellAtIndexPath(indexPath: indexPath)
-                cell.update(viewModel: viewModel)
-                return cell
-            }
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
-            if dataSource[indexPath.section].isExpanded {
-                dataSource[indexPath.section].isExpanded = false
-                let sections = IndexSet(integer: indexPath.section)
-                tableView.reloadSections(sections, with: .none)
-            } else {
-                dataSource[indexPath.section].isExpanded = true
-                let sections = IndexSet(integer: indexPath.section)
-                tableView.reloadSections(sections, with: .none)
-            }
-            let clickedCell = tableView.cellForRow(at: indexPath) as? ProfileSectionCell
-            clickedCell?.rotateArrowImage()
-        } else {
-            switch dataSource[indexPath.section].cells[indexPath.row - 1] {
-            case .notification(_):
-                let clickedCell = tableView.cellForRow(at: indexPath) as? NotificationCell
-                clickedCell?.toggleSelection()
-            default:
-                print("Default")
-            }
+        case .notification(let viewModel):
+            let cell: NotificationCell = tableView.dequeueCellAtIndexPath(indexPath: indexPath)
+            cell.update(viewModel: viewModel)
+            return cell
+        case .payMethod(let viewModel):
+            let cell: PayMethodCell = tableView.dequeueCellAtIndexPath(indexPath: indexPath)
+            cell.update(viewModel: viewModel)
+            return cell
+        case .personal(let viewModel):
+            let cell: PersonalCell = tableView.dequeueCellAtIndexPath(indexPath: indexPath)
+            cell.update(viewModel: viewModel)
+            return cell
         }
     }
 }

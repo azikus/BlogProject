@@ -30,10 +30,11 @@
 		CCFCEA1F2574ECC4000C4B0C /* Encodable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCEA0B2574ECC3000C4B0C /* Encodable+.swift */; };
 		CCFCEA202574ECC4000C4B0C /* Collection+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCEA0C2574ECC4000C4B0C /* Collection+.swift */; };
 		CCFCEA212574ECC4000C4B0C /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCEA0D2574ECC4000C4B0C /* String+Localization.swift */; };
-		CCFCEA242574F2BA000C4B0C /* ProfileSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCEA232574F2BA000C4B0C /* ProfileSectionCell.swift */; };
+		CCFCEA242574F2BA000C4B0C /* ProfileHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCEA232574F2BA000C4B0C /* ProfileHeaderCell.swift */; };
 		CCFCEA2B2574F676000C4B0C /* AppAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCEA2A2574F676000C4B0C /* AppAssets.swift */; };
 		CCFCEA30257511B6000C4B0C /* PayMethodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCEA2F257511B6000C4B0C /* PayMethodCell.swift */; };
 		CCFCEA3425751D54000C4B0C /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCEA3325751D54000C4B0C /* NotificationCell.swift */; };
+		CCFCEA39257687CD000C4B0C /* ProfileDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCEA38257687CD000C4B0C /* ProfileDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,10 +65,11 @@
 		CCFCEA0B2574ECC3000C4B0C /* Encodable+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Encodable+.swift"; sourceTree = "<group>"; };
 		CCFCEA0C2574ECC4000C4B0C /* Collection+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+.swift"; sourceTree = "<group>"; };
 		CCFCEA0D2574ECC4000C4B0C /* String+Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
-		CCFCEA232574F2BA000C4B0C /* ProfileSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSectionCell.swift; sourceTree = "<group>"; };
+		CCFCEA232574F2BA000C4B0C /* ProfileHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderCell.swift; sourceTree = "<group>"; };
 		CCFCEA2A2574F676000C4B0C /* AppAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssets.swift; sourceTree = "<group>"; };
 		CCFCEA2F257511B6000C4B0C /* PayMethodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayMethodCell.swift; sourceTree = "<group>"; };
 		CCFCEA3325751D54000C4B0C /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
+		CCFCEA38257687CD000C4B0C /* ProfileDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				CCFCE9F42574DED2000C4B0C /* Cells */,
 				CC370C1C2574D5CE009648C2 /* ProfileViewController.swift */,
 				CC370C262574D76F009648C2 /* ProfileViewModel.swift */,
+				CCFCEA38257687CD000C4B0C /* ProfileDataSource.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -135,7 +138,7 @@
 		CCFCE9F42574DED2000C4B0C /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				CCFCEA232574F2BA000C4B0C /* ProfileSectionCell.swift */,
+				CCFCEA232574F2BA000C4B0C /* ProfileHeaderCell.swift */,
 				CCFCE9F52574DEE4000C4B0C /* PersonalCell.swift */,
 				CCFCEA2F257511B6000C4B0C /* PayMethodCell.swift */,
 				CCFCEA3325751D54000C4B0C /* NotificationCell.swift */,
@@ -305,13 +308,14 @@
 				CCFCEA202574ECC4000C4B0C /* Collection+.swift in Sources */,
 				CCFCEA182574ECC4000C4B0C /* UIView+.swift in Sources */,
 				CCFCEA3425751D54000C4B0C /* NotificationCell.swift in Sources */,
+				CCFCEA39257687CD000C4B0C /* ProfileDataSource.swift in Sources */,
 				CCFCEA0E2574ECC4000C4B0C /* Float+.swift in Sources */,
 				CCFCE9F62574DEE4000C4B0C /* PersonalCell.swift in Sources */,
 				CCFCEA1D2574ECC4000C4B0C /* HTTPCookieStorage.swift in Sources */,
 				CC370C272574D76F009648C2 /* ProfileViewModel.swift in Sources */,
 				CC370C1D2574D5CE009648C2 /* ProfileViewController.swift in Sources */,
 				CCFCEA30257511B6000C4B0C /* PayMethodCell.swift in Sources */,
-				CCFCEA242574F2BA000C4B0C /* ProfileSectionCell.swift in Sources */,
+				CCFCEA242574F2BA000C4B0C /* ProfileHeaderCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

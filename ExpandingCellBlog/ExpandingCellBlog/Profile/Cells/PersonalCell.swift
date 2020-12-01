@@ -7,9 +7,14 @@
 
 import UIKit
 
-struct PersonalCellViewModel {
+class PersonalCellViewModel {
     let titleText: String
     let descriptionText: String
+    
+    init(titleText: String, descriptionText: String) {
+        self.titleText = titleText
+        self.descriptionText = descriptionText
+    }
 }
 
 class PersonalCell: UITableViewCell {

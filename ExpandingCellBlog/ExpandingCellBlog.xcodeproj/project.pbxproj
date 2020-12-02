@@ -126,8 +126,8 @@
 				CCFCE9F92574ECA9000C4B0C /* Extensions */,
 				CC370C042574D529009648C2 /* AppDelegate.swift */,
 				CCFCEA2A2574F676000C4B0C /* AppAssets.swift */,
-				CCFCEA3B25768C12000C4B0C /* BadProfile */,
-				CC370C292574D84F009648C2 /* Profile */,
+				CCFCEA3B25768C12000C4B0C /* ProfileTwo */,
+				CC370C292574D84F009648C2 /* ProfileOne */,
 				CC370C0D2574D52D009648C2 /* Assets.xcassets */,
 				CC370C0F2574D52D009648C2 /* LaunchScreen.storyboard */,
 				CC370C122574D52D009648C2 /* Info.plist */,
@@ -135,7 +135,7 @@
 			path = ExpandingCellBlog;
 			sourceTree = "<group>";
 		};
-		CC370C292574D84F009648C2 /* Profile */ = {
+		CC370C292574D84F009648C2 /* ProfileOne */ = {
 			isa = PBXGroup;
 			children = (
 				CCFCE9F42574DED2000C4B0C /* Cells */,
@@ -143,7 +143,7 @@
 				CC370C262574D76F009648C2 /* ProfileOneViewModel.swift */,
 				CCFCEA38257687CD000C4B0C /* ProfileOneDataSource.swift */,
 			);
-			path = Profile;
+			path = ProfileOne;
 			sourceTree = "<group>";
 		};
 		CCFCE9F42574DED2000C4B0C /* Cells */ = {
@@ -180,7 +180,7 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		CCFCEA3B25768C12000C4B0C /* BadProfile */ = {
+		CCFCEA3B25768C12000C4B0C /* ProfileTwo */ = {
 			isa = PBXGroup;
 			children = (
 				CCFCEA3D25768C3B000C4B0C /* Cells */,
@@ -188,7 +188,7 @@
 				CCFCEA41257698BD000C4B0C /* ProfileTwoViewModel.swift */,
 				CCFCEA44257698E5000C4B0C /* ProfileTwoDataSource.swift */,
 			);
-			path = BadProfile;
+			path = ProfileTwo;
 			sourceTree = "<group>";
 		};
 		CCFCEA3D25768C3B000C4B0C /* Cells */ = {

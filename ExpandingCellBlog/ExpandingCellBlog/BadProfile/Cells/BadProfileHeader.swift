@@ -43,7 +43,6 @@ class BadProfileHeader: UITableViewHeaderFooterView {
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
         contentView.backgroundColor = .lightGray
-        backgroundColor = .white
         self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
         addSubviews()
         setConstraints()

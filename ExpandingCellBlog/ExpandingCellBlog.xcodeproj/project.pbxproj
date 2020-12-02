@@ -11,8 +11,8 @@
 		CC370C052574D529009648C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC370C042574D529009648C2 /* AppDelegate.swift */; };
 		CC370C0E2574D52D009648C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC370C0D2574D52D009648C2 /* Assets.xcassets */; };
 		CC370C112574D52D009648C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC370C0F2574D52D009648C2 /* LaunchScreen.storyboard */; };
-		CC370C1D2574D5CE009648C2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC370C1C2574D5CE009648C2 /* ProfileViewController.swift */; };
-		CC370C272574D76F009648C2 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC370C262574D76F009648C2 /* ProfileViewModel.swift */; };
+		CC370C1D2574D5CE009648C2 /* ProfileOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC370C1C2574D5CE009648C2 /* ProfileOneViewController.swift */; };
+		CC370C272574D76F009648C2 /* ProfileOneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC370C262574D76F009648C2 /* ProfileOneViewModel.swift */; };
 		CCFCE9F62574DEE4000C4B0C /* PersonalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCE9F52574DEE4000C4B0C /* PersonalCell.swift */; };
 		CCFCEA0E2574ECC4000C4B0C /* Float+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCE9FA2574ECC3000C4B0C /* Float+.swift */; };
 		CCFCEA122574ECC4000C4B0C /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCE9FE2574ECC3000C4B0C /* String+.swift */; };
@@ -34,12 +34,12 @@
 		CCFCEA2B2574F676000C4B0C /* AppAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCEA2A2574F676000C4B0C /* AppAssets.swift */; };
 		CCFCEA30257511B6000C4B0C /* PayMethodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCEA2F257511B6000C4B0C /* PayMethodCell.swift */; };
 		CCFCEA3425751D54000C4B0C /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCEA3325751D54000C4B0C /* NotificationCell.swift */; };
-		CCFCEA39257687CD000C4B0C /* ProfileDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCEA38257687CD000C4B0C /* ProfileDataSource.swift */; };
-		CCFCEA3F25768C4F000C4B0C /* BadProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCEA3E25768C4F000C4B0C /* BadProfileViewController.swift */; };
-		CCFCEA42257698BD000C4B0C /* BadProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCEA41257698BD000C4B0C /* BadProfileViewModel.swift */; };
-		CCFCEA45257698E5000C4B0C /* BadProfileDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCEA44257698E5000C4B0C /* BadProfileDataSource.swift */; };
-		CCFCEA4825769E1E000C4B0C /* BadProfileCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCEA4725769E1E000C4B0C /* BadProfileCellType.swift */; };
-		CCFCEA4E257780EB000C4B0C /* BadProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCEA4D257780EB000C4B0C /* BadProfileHeader.swift */; };
+		CCFCEA39257687CD000C4B0C /* ProfileOneDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCEA38257687CD000C4B0C /* ProfileOneDataSource.swift */; };
+		CCFCEA3F25768C4F000C4B0C /* ProfileTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCEA3E25768C4F000C4B0C /* ProfileTwoViewController.swift */; };
+		CCFCEA42257698BD000C4B0C /* ProfileTwoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCEA41257698BD000C4B0C /* ProfileTwoViewModel.swift */; };
+		CCFCEA45257698E5000C4B0C /* ProfileTwoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCEA44257698E5000C4B0C /* ProfileTwoDataSource.swift */; };
+		CCFCEA4825769E1E000C4B0C /* ProfileTwoCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCEA4725769E1E000C4B0C /* ProfileTwoCellType.swift */; };
+		CCFCEA4E257780EB000C4B0C /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCEA4D257780EB000C4B0C /* ProfileHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,8 +51,8 @@
 		CC370C0D2574D52D009648C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC370C102574D52D009648C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC370C122574D52D009648C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CC370C1C2574D5CE009648C2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		CC370C262574D76F009648C2 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		CC370C1C2574D5CE009648C2 /* ProfileOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOneViewController.swift; sourceTree = "<group>"; };
+		CC370C262574D76F009648C2 /* ProfileOneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOneViewModel.swift; sourceTree = "<group>"; };
 		CCFCE9F52574DEE4000C4B0C /* PersonalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalCell.swift; sourceTree = "<group>"; };
 		CCFCE9FA2574ECC3000C4B0C /* Float+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Float+.swift"; sourceTree = "<group>"; };
 		CCFCE9FE2574ECC3000C4B0C /* String+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
@@ -74,12 +74,12 @@
 		CCFCEA2A2574F676000C4B0C /* AppAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssets.swift; sourceTree = "<group>"; };
 		CCFCEA2F257511B6000C4B0C /* PayMethodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayMethodCell.swift; sourceTree = "<group>"; };
 		CCFCEA3325751D54000C4B0C /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
-		CCFCEA38257687CD000C4B0C /* ProfileDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataSource.swift; sourceTree = "<group>"; };
-		CCFCEA3E25768C4F000C4B0C /* BadProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadProfileViewController.swift; sourceTree = "<group>"; };
-		CCFCEA41257698BD000C4B0C /* BadProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadProfileViewModel.swift; sourceTree = "<group>"; };
-		CCFCEA44257698E5000C4B0C /* BadProfileDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadProfileDataSource.swift; sourceTree = "<group>"; };
-		CCFCEA4725769E1E000C4B0C /* BadProfileCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadProfileCellType.swift; sourceTree = "<group>"; };
-		CCFCEA4D257780EB000C4B0C /* BadProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadProfileHeader.swift; sourceTree = "<group>"; };
+		CCFCEA38257687CD000C4B0C /* ProfileOneDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOneDataSource.swift; sourceTree = "<group>"; };
+		CCFCEA3E25768C4F000C4B0C /* ProfileTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTwoViewController.swift; sourceTree = "<group>"; };
+		CCFCEA41257698BD000C4B0C /* ProfileTwoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTwoViewModel.swift; sourceTree = "<group>"; };
+		CCFCEA44257698E5000C4B0C /* ProfileTwoDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTwoDataSource.swift; sourceTree = "<group>"; };
+		CCFCEA4725769E1E000C4B0C /* ProfileTwoCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTwoCellType.swift; sourceTree = "<group>"; };
+		CCFCEA4D257780EB000C4B0C /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,9 +139,9 @@
 			isa = PBXGroup;
 			children = (
 				CCFCE9F42574DED2000C4B0C /* Cells */,
-				CC370C1C2574D5CE009648C2 /* ProfileViewController.swift */,
-				CC370C262574D76F009648C2 /* ProfileViewModel.swift */,
-				CCFCEA38257687CD000C4B0C /* ProfileDataSource.swift */,
+				CC370C1C2574D5CE009648C2 /* ProfileOneViewController.swift */,
+				CC370C262574D76F009648C2 /* ProfileOneViewModel.swift */,
+				CCFCEA38257687CD000C4B0C /* ProfileOneDataSource.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -184,9 +184,9 @@
 			isa = PBXGroup;
 			children = (
 				CCFCEA3D25768C3B000C4B0C /* Cells */,
-				CCFCEA3E25768C4F000C4B0C /* BadProfileViewController.swift */,
-				CCFCEA41257698BD000C4B0C /* BadProfileViewModel.swift */,
-				CCFCEA44257698E5000C4B0C /* BadProfileDataSource.swift */,
+				CCFCEA3E25768C4F000C4B0C /* ProfileTwoViewController.swift */,
+				CCFCEA41257698BD000C4B0C /* ProfileTwoViewModel.swift */,
+				CCFCEA44257698E5000C4B0C /* ProfileTwoDataSource.swift */,
 			);
 			path = BadProfile;
 			sourceTree = "<group>";
@@ -194,8 +194,8 @@
 		CCFCEA3D25768C3B000C4B0C /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				CCFCEA4725769E1E000C4B0C /* BadProfileCellType.swift */,
-				CCFCEA4D257780EB000C4B0C /* BadProfileHeader.swift */,
+				CCFCEA4725769E1E000C4B0C /* ProfileTwoCellType.swift */,
+				CCFCEA4D257780EB000C4B0C /* ProfileHeaderView.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -327,8 +327,8 @@
 				CCFCEA162574ECC4000C4B0C /* UICollectionView+.swift in Sources */,
 				CC370C052574D529009648C2 /* AppDelegate.swift in Sources */,
 				CCFCEA1B2574ECC4000C4B0C /* UITableView+.swift in Sources */,
-				CCFCEA4E257780EB000C4B0C /* BadProfileHeader.swift in Sources */,
-				CCFCEA42257698BD000C4B0C /* BadProfileViewModel.swift in Sources */,
+				CCFCEA4E257780EB000C4B0C /* ProfileHeaderView.swift in Sources */,
+				CCFCEA42257698BD000C4B0C /* ProfileTwoViewModel.swift in Sources */,
 				CCFCEA122574ECC4000C4B0C /* String+.swift in Sources */,
 				CCFCEA1F2574ECC4000C4B0C /* Encodable+.swift in Sources */,
 				CCFCEA1E2574ECC4000C4B0C /* Int+.swift in Sources */,
@@ -338,18 +338,18 @@
 				CCFCEA172574ECC4000C4B0C /* UIStackView+.swift in Sources */,
 				CCFCEA1C2574ECC4000C4B0C /* Date+.swift in Sources */,
 				CCFCEA212574ECC4000C4B0C /* String+Localization.swift in Sources */,
-				CCFCEA4825769E1E000C4B0C /* BadProfileCellType.swift in Sources */,
+				CCFCEA4825769E1E000C4B0C /* ProfileTwoCellType.swift in Sources */,
 				CCFCEA202574ECC4000C4B0C /* Collection+.swift in Sources */,
 				CCFCEA182574ECC4000C4B0C /* UIView+.swift in Sources */,
 				CCFCEA3425751D54000C4B0C /* NotificationCell.swift in Sources */,
-				CCFCEA39257687CD000C4B0C /* ProfileDataSource.swift in Sources */,
-				CCFCEA3F25768C4F000C4B0C /* BadProfileViewController.swift in Sources */,
+				CCFCEA39257687CD000C4B0C /* ProfileOneDataSource.swift in Sources */,
+				CCFCEA3F25768C4F000C4B0C /* ProfileTwoViewController.swift in Sources */,
 				CCFCEA0E2574ECC4000C4B0C /* Float+.swift in Sources */,
 				CCFCE9F62574DEE4000C4B0C /* PersonalCell.swift in Sources */,
 				CCFCEA1D2574ECC4000C4B0C /* HTTPCookieStorage.swift in Sources */,
-				CC370C272574D76F009648C2 /* ProfileViewModel.swift in Sources */,
-				CCFCEA45257698E5000C4B0C /* BadProfileDataSource.swift in Sources */,
-				CC370C1D2574D5CE009648C2 /* ProfileViewController.swift in Sources */,
+				CC370C272574D76F009648C2 /* ProfileOneViewModel.swift in Sources */,
+				CCFCEA45257698E5000C4B0C /* ProfileTwoDataSource.swift in Sources */,
+				CC370C1D2574D5CE009648C2 /* ProfileOneViewController.swift in Sources */,
 				CCFCEA30257511B6000C4B0C /* PayMethodCell.swift in Sources */,
 				CCFCEA242574F2BA000C4B0C /* ProfileHeaderCell.swift in Sources */,
 			);

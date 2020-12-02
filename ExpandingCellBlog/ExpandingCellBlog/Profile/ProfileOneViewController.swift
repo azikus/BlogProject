@@ -10,9 +10,9 @@ import RxCocoa
 import RxSwift
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileOneViewController: UIViewController {
     private let disposeBag = DisposeBag()
-    private let viewModel: ProfileViewModel
+    private let viewModel: ProfileOneViewModel
     
     // MARK: - Views
     
@@ -33,9 +33,9 @@ class ProfileViewController: UIViewController {
         return tableView
     }()
     
-    var dataSource = ProfileDataSource()
+    var dataSource = ProfileOneDataSource()
     
-    init(viewModel: ProfileViewModel) {
+    init(viewModel: ProfileOneViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -77,7 +77,7 @@ class ProfileViewController: UIViewController {
 
 // MARK: - UITableViewDelegate
 
-extension ProfileViewController: UITableViewDelegate {
+extension ProfileOneViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch dataSource.flattenDataSource[indexPath.row] {
         case .header(let viewModel):
@@ -104,7 +104,7 @@ extension ProfileViewController: UITableViewDelegate {
 
 // MARK: - UITableViewDataSource
 
-extension ProfileViewController: UITableViewDataSource {
+extension ProfileOneViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

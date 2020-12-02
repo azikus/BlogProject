@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ProfileViewModel {
+class ProfileOneViewModel {
     init() {
         
     }

@@ -8,9 +8,9 @@
 import UIKit
 import RxSwift
 
-class BadProfileViewController: UIViewController {
+class ProfileTwoViewController: UIViewController {
     private let disposeBag = DisposeBag()
-    private let viewModel: BadProfileViewModel
+    private let viewModel: ProfileTwoViewModel
     
     // MARK: - Views
     
@@ -30,9 +30,9 @@ class BadProfileViewController: UIViewController {
         return tableView
     }()
     
-    var dataSource = BadProfileDataSource()
+    var dataSource = ProfileTwoDataSource()
     
-    init(viewModel: BadProfileViewModel) {
+    init(viewModel: ProfileTwoViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -62,7 +62,7 @@ class BadProfileViewController: UIViewController {
         }
     }
     
-    private func indexPathOfHeader(header: BadProfileHeaderViewModel) -> Int {
+    private func indexPathOfHeader(header: ProfileHeaderViewModel) -> Int {
         for (index, dataSourceHeader) in dataSource.data.enumerated() {
             if header == dataSourceHeader {
                 return index
@@ -74,7 +74,7 @@ class BadProfileViewController: UIViewController {
 
 // MARK: - UITableViewDelegate
 
-extension BadProfileViewController: UITableViewDelegate {
+extension ProfileTwoViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch dataSource.data[indexPath.section].cells[indexPath.row] {
         case.notification(let viewModel):
@@ -85,15 +85,11 @@ extension BadProfileViewController: UITableViewDelegate {
             break
         }
     }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 50
-    }
 }
 
 // MARK: - UITableViewDataSource
 
-extension BadProfileViewController: UITableViewDataSource {
+extension ProfileTwoViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return dataSource.data.count
     }
@@ -107,7 +103,7 @@ extension BadProfileViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = BadProfileHeader()
+        let header = ProfileHeaderView()
         header.delegate = self
         header.update(viewModel: dataSource.data[section])
         return header
@@ -133,8 +129,8 @@ extension BadProfileViewController: UITableViewDataSource {
 
 // MARK: - Views
 
-extension BadProfileViewController: BadProfileHeaderDelegate {
-    func toggleSection(header: BadProfileHeader) {
+extension ProfileTwoViewController: ProfileHeaderViewDelegate {
+    func toggleSection(header: ProfileHeaderView) {
         guard let viewModel = header.viewModel else { return }
         let headerIndexPath = indexPathOfHeader(header: viewModel)
         dataSource.data[headerIndexPath].isExpanded = !dataSource.data[headerIndexPath].isExpanded

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum BadProfileCellType {
+enum ProfileTwoCellType {
     case personal(PersonalCellViewModel)
     case payMethod(PayMethodCellViewModel)
     case notification(NotificationCellViewModel)

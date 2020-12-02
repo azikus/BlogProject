@@ -7,6 +7,6 @@
 
 import Foundation
 
-class BadProfileViewModel {
+class ProfileTwoViewModel {
     init() {}
 }

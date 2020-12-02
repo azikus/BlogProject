@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum ProfileCellType {
+enum ProfileOneCellType {
     case header(ProfileHeaderCellViewModel)
     case personal(PersonalCellViewModel)
     case payMethod(PayMethodCellViewModel)
@@ -16,10 +16,10 @@ enum ProfileCellType {
 
 class ProfileHeaderCellViewModel: Equatable {
     let titleText: String
-    let cells: [ProfileCellType]
+    let cells: [ProfileOneCellType]
     var isExpanded: Bool
     
-    init(titleText: String, cells: [ProfileCellType], isExpanded: Bool) {
+    init(titleText: String, cells: [ProfileOneCellType], isExpanded: Bool) {
         self.titleText = titleText
         self.cells = cells
         self.isExpanded = isExpanded

@@ -15,13 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        let profileViewModel = ProfileViewModel()
-        let profileViewController = ProfileViewController(viewModel: profileViewModel)
-        profileViewController.tabBarItem.title = "ProfileVC"
+        let profileViewModel = ProfileOneViewModel()
+        let profileViewController = ProfileOneViewController(viewModel: profileViewModel)
+        profileViewController.tabBarItem.title = "Profile 1"
         
-        let badProfileViewModel = BadProfileViewModel()
-        let badProfileViewController = BadProfileViewController(viewModel: badProfileViewModel)
-        badProfileViewController.tabBarItem.title = "BadProfileVC"
+        let badProfileViewModel = ProfileTwoViewModel()
+        let badProfileViewController = ProfileTwoViewController(viewModel: badProfileViewModel)
+        badProfileViewController.tabBarItem.title = "Profile 2 "
         
         let tabBarViewController = UITabBarController()
         tabBarViewController.viewControllers = [profileViewController, badProfileViewController]

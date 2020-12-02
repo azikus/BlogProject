@@ -16,6 +16,9 @@ enum AppAssets: String {
     case visa
     case aircash
     case bitcoin
+    case applePay
+    case googlePay
+    case masterCard
     
     var image: UIImage? {
         return UIImage(named: rawValue)

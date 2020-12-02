@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "AppIcon1024x1024@1x 1.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -9,9 +9,13 @@ import UIKit
 
 enum AppAssets: String {
     case downArrow
-    case payPal
     case circleDeselected
     case circleSelected
+    case payPal
+    case maestro
+    case visa
+    case aircash
+    case bitcoin
     
     var image: UIImage? {
         return UIImage(named: rawValue)

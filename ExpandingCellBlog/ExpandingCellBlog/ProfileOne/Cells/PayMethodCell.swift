@@ -59,7 +59,6 @@ class PayMethodCell: UITableViewCell {
             $0.top.bottom.equalToSuperview().inset(15)
             $0.leading.equalToSuperview().offset(25)
             $0.height.equalTo(25)
-            $0.width.equalTo(60)
         }
         
         addMethodButton.snp.remakeConstraints {

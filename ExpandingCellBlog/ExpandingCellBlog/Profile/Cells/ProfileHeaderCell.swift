@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum CellType {
+enum ProfileCellType {
     case header(ProfileHeaderCellViewModel)
     case personal(PersonalCellViewModel)
     case payMethod(PayMethodCellViewModel)
@@ -16,10 +16,10 @@ enum CellType {
 
 class ProfileHeaderCellViewModel: Equatable {
     let titleText: String
-    let cells: [CellType]
+    let cells: [ProfileCellType]
     var isExpanded: Bool
     
-    init(titleText: String, cells: [CellType], isExpanded: Bool) {
+    init(titleText: String, cells: [ProfileCellType], isExpanded: Bool) {
         self.titleText = titleText
         self.cells = cells
         self.isExpanded = isExpanded
@@ -86,7 +86,6 @@ class ProfileHeaderCell: UITableViewCell {
                 self.arrowImageView.transform = viewModel.isExpanded ? CGAffineTransform(rotationAngle: .pi) : .identity
             })
         }
-        arrowImageView.transform = viewModel.isExpanded ? CGAffineTransform(rotationAngle: .pi) : .identity
     }
     
 }

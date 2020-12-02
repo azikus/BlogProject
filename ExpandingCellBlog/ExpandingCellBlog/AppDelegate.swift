@@ -15,12 +15,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        let viewModel = ProfileViewModel()
-        let viewController = ProfileViewController(viewModel: viewModel)
-        window?.rootViewController = viewController
+        let profileViewModel = ProfileViewModel()
+        let profileViewController = ProfileViewController(viewModel: profileViewModel)
+        profileViewController.tabBarItem.title = "ProfileVC"
+        
+        let badProfileViewModel = BadProfileViewModel()
+        let badProfileViewController = BadProfileViewController(viewModel: badProfileViewModel)
+        badProfileViewController.tabBarItem.title = "BadProfileVC"
+        
+        let tabBarViewController = UITabBarController()
+        tabBarViewController.viewControllers = [profileViewController, badProfileViewController]
+        
+        window?.rootViewController = tabBarViewController
         window?.makeKeyAndVisible()
         
         return true
     }
 }
-

@@ -8,7 +8,7 @@
 import Foundation
 
 class ProfileDataSource {
-    var data: [CellType] = [.header(ProfileHeaderCellViewModel(titleText: "Personal",
+    var data: [ProfileCellType] = [.header(ProfileHeaderCellViewModel(titleText: "Personal",
                                                                      cells: [.personal(PersonalCellViewModel(titleText: "Username:", descriptionText: "Kresimir")),
                                                                              .personal(PersonalCellViewModel(titleText: "Email:", descriptionText: "kresimir@gmail.com")),
                                                                              .personal(PersonalCellViewModel(titleText: "Password:", descriptionText: "*********")),
@@ -25,7 +25,7 @@ class ProfileDataSource {
                                                                      isExpanded: false))
     ]
     
-    var flattenDataSource: [CellType] = []
+    var flattenDataSource: [ProfileCellType] = []
     
     init() {
         flatDataSource()
@@ -57,10 +57,10 @@ class ProfileDataSource {
     }
     
     func flatDataSource() {
-        var flattenArray: [CellType] = []
+        var flattenArray: [ProfileCellType] = []
         for cell in data {
             flattenArray.append(cell)
-            var childCells: [CellType] = []
+            var childCells: [ProfileCellType] = []
             switch cell {
             case .header(let viewModel):
                 if viewModel.isExpanded {

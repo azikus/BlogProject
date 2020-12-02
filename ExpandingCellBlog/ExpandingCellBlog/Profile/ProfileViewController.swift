@@ -52,22 +52,16 @@ class ProfileViewController: UIViewController {
         view.backgroundColor = .white
         addSubviews()
         setConstraints()
-        observe()
     }
     
     private func addSubviews() {
         view.addSubview(tableView)
-        
     }
     
     private func setConstraints() {
         tableView.snp.remakeConstraints {
             $0.edges.equalToSuperview()
         }
-    }
-    
-    private func observe() {
-        
     }
     
     private func hideChildCellsForHeader(with indexPath: IndexPath) {

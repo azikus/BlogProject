@@ -49,7 +49,6 @@ class BadProfileViewController: UIViewController {
         view.backgroundColor = .white
         addSubviews()
         setConstraints()
-        observe()
     }
     
     private func addSubviews() {
@@ -61,10 +60,6 @@ class BadProfileViewController: UIViewController {
         tableView.snp.remakeConstraints {
             $0.edges.equalToSuperview()
         }
-    }
-    
-    private func observe() {
-        
     }
     
     private func indexPathOfHeader(header: BadProfileHeaderViewModel) -> Int {

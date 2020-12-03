@@ -70,6 +70,16 @@ class ProfileTwoViewController: UIViewController {
         }
         return 0
     }
+    
+    private func hideChildCellsForHeader(with index: Int) {
+        let childrenIndexPaths = dataSource.findChildIndexPathsOfHeader(with: index)
+        tableView.deleteRows(at: childrenIndexPaths, with: .fade)
+    }
+    
+    private func showChildCellsForHeader(with index: Int) {
+        let childrenIndexPaths = dataSource.findChildIndexPathsOfHeader(with: index)
+        tableView.insertRows(at: childrenIndexPaths, with: .fade)
+    }
 }
 
 // MARK: - UITableViewDelegate
@@ -127,14 +137,18 @@ extension ProfileTwoViewController: UITableViewDataSource {
     }
 }
 
-// MARK: - Views
+// MARK: - ProfileHeaderViewDelegate
 
 extension ProfileTwoViewController: ProfileHeaderViewDelegate {
     func toggleSection(header: ProfileHeaderView) {
         guard let viewModel = header.viewModel else { return }
-        let headerIndexPath = indexPathOfHeader(header: viewModel)
-        dataSource.data[headerIndexPath].isExpanded = !dataSource.data[headerIndexPath].isExpanded
-        let sections = IndexSet.init(integer: headerIndexPath)
-        tableView.reloadSections(sections, with: .fade)
+        let headerIndex = indexPathOfHeader(header: viewModel)
+        if viewModel.isExpanded {
+            viewModel.isExpanded = false
+            hideChildCellsForHeader(with: headerIndex)
+        } else {
+            viewModel.isExpanded = true
+            showChildCellsForHeader(with: headerIndex)
+        }
     }
 }

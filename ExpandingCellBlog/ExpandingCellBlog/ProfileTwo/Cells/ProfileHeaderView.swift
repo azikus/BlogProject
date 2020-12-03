@@ -84,12 +84,13 @@ class ProfileHeaderView: UITableViewHeaderFooterView {
     func update(viewModel: ProfileHeaderViewModel) {
         titleLabel.text = viewModel.titleText
         self.viewModel = viewModel
-        UIView.animate(withDuration: 0.3, animations: {
-            self.arrowImageView.transform = viewModel.isExpanded ? CGAffineTransform(rotationAngle: .pi) : .identity
-        })
     }
     
     @objc func handleTap() {
         delegate?.toggleSection(header: self)
+        guard let viewModel = viewModel else { return }
+        UIView.animate(withDuration: 0.3, animations: {
+            self.arrowImageView.transform = viewModel.isExpanded ? CGAffineTransform(rotationAngle: .pi) : .identity
+        })
     }
 }

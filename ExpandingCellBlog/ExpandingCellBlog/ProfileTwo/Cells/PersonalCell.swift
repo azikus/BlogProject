@@ -21,14 +21,18 @@ class PersonalCell: UITableViewCell {
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
+        label.textColor = .black
         label.font = .systemFont(ofSize: 14, weight: .bold)
+        
         return label
     }()
 
     lazy var descriptionLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
+        label.textColor = .black
         label.font = .systemFont(ofSize: 13)
+        
         return label
     }()
 

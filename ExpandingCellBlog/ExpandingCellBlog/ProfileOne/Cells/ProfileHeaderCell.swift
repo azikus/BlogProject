@@ -34,7 +34,9 @@ class ProfileHeaderCell: UITableViewCell {
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
+        label.textColor = .black
         label.font = .systemFont(ofSize: 22, weight: .semibold)
+        
         return label
     }()
     

@@ -28,6 +28,7 @@ class NotificationCell: UITableViewCell {
     lazy var titleLabel: UILabel = {
        let label = UILabel()
         label.font = .systemFont(ofSize: 13)
+        label.textColor = .black
         
         return label
     }()

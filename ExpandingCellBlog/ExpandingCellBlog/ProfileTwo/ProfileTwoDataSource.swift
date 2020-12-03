@@ -44,11 +44,11 @@ class ProfileTwoDataSource {
     init() {}
     
     func findChildIndexPathsOfHeader(with headerIndex: Int) -> [IndexPath] {
-        var childIndexPaths: [IndexPath] = []
+        var childrenIndexPaths: [IndexPath] = []
         let numberOfChildern = data[headerIndex].cells.count
         for index in 0..<numberOfChildern {
-            childIndexPaths.append(IndexPath(item: index, section: headerIndex))
+            childrenIndexPaths.append(IndexPath(item: index, section: headerIndex))
         }
-        return childIndexPaths
+        return childrenIndexPaths
     }
 }

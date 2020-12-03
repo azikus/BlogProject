@@ -62,7 +62,7 @@ class ProfileTwoViewController: UIViewController {
         }
     }
     
-    private func indexPathOfHeader(header: ProfileHeaderViewModel) -> Int {
+    private func indexOfHeader(header: ProfileHeaderViewModel) -> Int {
         for (index, dataSourceHeader) in dataSource.data.enumerated() {
             if header == dataSourceHeader {
                 return index
@@ -140,9 +140,9 @@ extension ProfileTwoViewController: UITableViewDataSource {
 // MARK: - ProfileHeaderViewDelegate
 
 extension ProfileTwoViewController: ProfileHeaderViewDelegate {
-    func toggleSection(header: ProfileHeaderView) {
+    func toggleSection(for header: ProfileHeaderView) {
         guard let viewModel = header.viewModel else { return }
-        let headerIndex = indexPathOfHeader(header: viewModel)
+        let headerIndex = indexOfHeader(header: viewModel)
         if viewModel.isExpanded {
             viewModel.isExpanded = false
             hideChildCellsForHeader(with: headerIndex)

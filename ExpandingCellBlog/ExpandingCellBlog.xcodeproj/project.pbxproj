@@ -150,9 +150,6 @@
 			isa = PBXGroup;
 			children = (
 				CCFCEA232574F2BA000C4B0C /* ProfileHeaderCell.swift */,
-				CCFCE9F52574DEE4000C4B0C /* PersonalCell.swift */,
-				CCFCEA2F257511B6000C4B0C /* PayMethodCell.swift */,
-				CCFCEA3325751D54000C4B0C /* NotificationCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -196,6 +193,9 @@
 			children = (
 				CCFCEA4725769E1E000C4B0C /* ProfileTwoCellType.swift */,
 				CCFCEA4D257780EB000C4B0C /* ProfileHeaderView.swift */,
+				CCFCE9F52574DEE4000C4B0C /* PersonalCell.swift */,
+				CCFCEA2F257511B6000C4B0C /* PayMethodCell.swift */,
+				CCFCEA3325751D54000C4B0C /* NotificationCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";

@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 
 protocol ProfileHeaderViewDelegate {
-    func toggleSection(header: ProfileHeaderView)
+    func toggleSection(for header: ProfileHeaderView)
 }
 
 class ProfileHeaderViewModel: Equatable {
@@ -87,7 +87,7 @@ class ProfileHeaderView: UITableViewHeaderFooterView {
     }
     
     @objc func handleTap() {
-        delegate?.toggleSection(header: self)
+        delegate?.toggleSection(for: self)
         guard let viewModel = viewModel else { return }
         UIView.animate(withDuration: 0.3, animations: {
             self.arrowImageView.transform = viewModel.isExpanded ? CGAffineTransform(rotationAngle: .pi) : .identity

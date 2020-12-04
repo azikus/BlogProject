@@ -15,29 +15,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        let profileOneViewModel = ProfileOneViewModel()
-        let profileOneViewController = ProfileOneViewController(viewModel: profileOneViewModel)
+        let editProfileViewModel = EditProfileViewModel()
+        let editProfileViewController = EditProfileViewController(viewModel: editProfileViewModel)
         
-        let profileTwoViewModel = EditProfileViewModel()
-        let profileTwoViewController = EditProfileViewController(viewModel: profileTwoViewModel)
+        let editProfileFixViewModel = EditProfileFixViewModel()
+        let editProfileFixViewController = EditProfileFixViewController(viewModel: editProfileFixViewModel)
         
         let tabBarViewController = UITabBarController()
         tabBarViewController.tabBar.tintColor = .black
         tabBarViewController.tabBar.barTintColor = .gray247
         
-        let profileOneNavigationController = UINavigationController(rootViewController: profileOneViewController)
-        profileOneNavigationController.tabBarItem.title = "Edit profile 1"
-        profileOneNavigationController.navigationBar.barTintColor = .gray247
+        let editProfileNavigationController = UINavigationController(rootViewController: editProfileViewController)
+        editProfileNavigationController.tabBarItem.title = "Edit profile"
+        editProfileNavigationController.navigationBar.barTintColor = .gray247
         let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
-        profileOneNavigationController.navigationBar.titleTextAttributes = textAttributes
-        let profileTwoNavigationController = UINavigationController(rootViewController: profileTwoViewController)
-        profileTwoNavigationController.tabBarItem.title = "Edit profile 2"
-        profileTwoNavigationController.navigationBar.barTintColor = .gray247
-        profileTwoNavigationController.navigationBar.titleTextAttributes = textAttributes
-
-        tabBarViewController.viewControllers = [profileOneNavigationController, profileTwoNavigationController]
+        editProfileNavigationController.navigationBar.titleTextAttributes = textAttributes
         
-        window?.rootViewController = profileTwoNavigationController
+        let editProfileFixNavigationController = UINavigationController(rootViewController: editProfileFixViewController)
+        editProfileFixNavigationController.tabBarItem.title = "Edit profile fix"
+        editProfileFixNavigationController.navigationBar.barTintColor = .gray247
+        editProfileFixNavigationController.navigationBar.titleTextAttributes = textAttributes
+
+        tabBarViewController.viewControllers = [editProfileNavigationController, editProfileFixNavigationController]
+        
+        window?.rootViewController = tabBarViewController
         window?.makeKeyAndVisible()
         
         return true

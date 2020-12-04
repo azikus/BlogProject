@@ -1,5 +1,5 @@
 //
-//  ProfileCell.swift
+//  PersonalCell.swift
 //  ExpandingCellBlog
 //
 //  Created by Krešimir Baković on 30/11/2020.

@@ -1,5 +1,5 @@
 //
-//  ProfileSectionCell.swift
+//  EditProfileFixHeaderCell.swift
 //  ExpandingCellBlog
 //
 //  Created by Krešimir Baković on 30/11/2020.
@@ -7,30 +7,23 @@
 
 import UIKit
 
-enum ProfileOneCellType {
-    case header(ProfileHeaderCellViewModel)
-    case personal(PersonalCellViewModel)
-    case payMethod(PayMethodCellViewModel)
-    case notification(NotificationCellViewModel)
-}
-
-class ProfileHeaderCellViewModel: Equatable {
+class EditProfileFixHeaderCellViewModel: Equatable {
     let titleText: String
-    let cells: [ProfileOneCellType]
+    let cells: [EditProfileFixCellType]
     var isExpanded: Bool
     
-    init(titleText: String, cells: [ProfileOneCellType], isExpanded: Bool) {
+    init(titleText: String, cells: [EditProfileFixCellType], isExpanded: Bool) {
         self.titleText = titleText
         self.cells = cells
         self.isExpanded = isExpanded
     }
     
-    static func == (lhs: ProfileHeaderCellViewModel, rhs: ProfileHeaderCellViewModel) -> Bool {
+    static func == (lhs: EditProfileFixHeaderCellViewModel, rhs: EditProfileFixHeaderCellViewModel) -> Bool {
         return lhs.titleText == rhs.titleText && lhs.cells.count == rhs.cells.count
     }
 }
 
-class ProfileHeaderCell: UITableViewCell {
+class EditProfileFixHeaderCell: UITableViewCell {
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
@@ -81,7 +74,7 @@ class ProfileHeaderCell: UITableViewCell {
         }
     }
     
-    func update(viewModel: ProfileHeaderCellViewModel, animated: Bool) {
+    func update(viewModel: EditProfileFixHeaderCellViewModel, animated: Bool) {
         titleLabel.text = viewModel.titleText
         if animated {
             UIView.animate(withDuration: 0.3, animations: {

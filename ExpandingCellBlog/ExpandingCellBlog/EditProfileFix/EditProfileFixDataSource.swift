@@ -1,5 +1,5 @@
 //
-//  ProfileDataSource.swift
+//  EditProfileFixDataSource.swift
 //  ExpandingCellBlog
 //
 //  Created by Krešimir Baković on 01/12/2020.
@@ -7,8 +7,8 @@
 
 import Foundation
 
-class ProfileOneDataSource {
-    var data: [ProfileOneCellType] = [.header(ProfileHeaderCellViewModel(titleText: "Personal",
+class EditProfileFixDataSource {
+    var data: [EditProfileFixCellType] = [.header(EditProfileFixHeaderCellViewModel(titleText: "Personal",
                                                                          cells: [.personal(PersonalCellViewModel(titleText: "Username:", descriptionText: "Kresimir")),
                                                                                  .personal(PersonalCellViewModel(titleText: "Email:", descriptionText: "kresimir@gmail.com")),
                                                                                  .personal(PersonalCellViewModel(titleText: "Password:", descriptionText: "*********")),
@@ -19,7 +19,7 @@ class ProfileOneDataSource {
                                                                                  .personal(PersonalCellViewModel(titleText: "Gender:", descriptionText: "Male")),
                                                                                  .personal(PersonalCellViewModel(titleText: "Nickname:", descriptionText: "Soksijada"))],
                                                                          isExpanded: false)),
-                                      .header(ProfileHeaderCellViewModel(titleText: "Payout Method",
+                                      .header(EditProfileFixHeaderCellViewModel(titleText: "Payout Method",
                                                                          cells: [.payMethod(PayMethodCellViewModel(image: AppAssets.aircash.image)),
                                                                                  .payMethod(PayMethodCellViewModel(image: AppAssets.applePay.image)),
                                                                                  .payMethod(PayMethodCellViewModel(image: AppAssets.googlePay.image)),
@@ -29,7 +29,7 @@ class ProfileOneDataSource {
                                                                                  .payMethod(PayMethodCellViewModel(image: AppAssets.bitcoin.image)),
                                                                                  .payMethod(PayMethodCellViewModel(image: AppAssets.masterCard.image))],
                                                                          isExpanded: false)),
-                                      .header(ProfileHeaderCellViewModel(titleText: "Notifications",
+                                      .header(EditProfileFixHeaderCellViewModel(titleText: "Notifications",
                                                                          cells: [.notification(NotificationCellViewModel(titleText: "Email", isEnabled: false)),
                                                                                  .notification(NotificationCellViewModel(titleText: "Push notifications", isEnabled: true)),
                                                                                  .notification(NotificationCellViewModel(titleText: "Phone calls", isEnabled: false)),
@@ -41,7 +41,7 @@ class ProfileOneDataSource {
                                                                          isExpanded: false))
     ]
     
-    var flattenDataSource: [ProfileOneCellType] = []
+    var flattenDataSource: [EditProfileFixCellType] = []
     
     init() {
         flatDataSource()
@@ -73,10 +73,10 @@ class ProfileOneDataSource {
     }
     
     func flatDataSource() {
-        var flattenArray: [ProfileOneCellType] = []
+        var flattenArray: [EditProfileFixCellType] = []
         for cell in data {
             flattenArray.append(cell)
-            var childCells: [ProfileOneCellType] = []
+            var childCells: [EditProfileFixCellType] = []
             switch cell {
             case .header(let viewModel):
                 if viewModel.isExpanded {

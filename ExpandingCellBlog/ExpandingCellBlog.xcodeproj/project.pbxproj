@@ -11,10 +11,12 @@
 		CC370C052574D529009648C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC370C042574D529009648C2 /* AppDelegate.swift */; };
 		CC370C0E2574D52D009648C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC370C0D2574D52D009648C2 /* Assets.xcassets */; };
 		CC370C112574D52D009648C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC370C0F2574D52D009648C2 /* LaunchScreen.storyboard */; };
-		CC370C1D2574D5CE009648C2 /* ProfileOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC370C1C2574D5CE009648C2 /* ProfileOneViewController.swift */; };
-		CC370C272574D76F009648C2 /* ProfileOneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC370C262574D76F009648C2 /* ProfileOneViewModel.swift */; };
+		CC370C1D2574D5CE009648C2 /* EditProfileFixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC370C1C2574D5CE009648C2 /* EditProfileFixViewController.swift */; };
+		CC370C272574D76F009648C2 /* EditProfileFixViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC370C262574D76F009648C2 /* EditProfileFixViewModel.swift */; };
 		CC4C59A1257A2DE700EC66A4 /* TableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4C59A0257A2DE700EC66A4 /* TableViewHeader.swift */; };
 		CC4C59A4257A378700EC66A4 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4C59A3257A378700EC66A4 /* UIColor+.swift */; };
+		CC4C59B0257A570200EC66A4 /* EditProfileDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4C59AF257A570200EC66A4 /* EditProfileDataSource.swift */; };
+		CC8E89D7257A597900433D6C /* EditProfileFixCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8E89D6257A597900433D6C /* EditProfileFixCellType.swift */; };
 		CCFCE9F62574DEE4000C4B0C /* PersonalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCE9F52574DEE4000C4B0C /* PersonalCell.swift */; };
 		CCFCEA0E2574ECC4000C4B0C /* Float+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCE9FA2574ECC3000C4B0C /* Float+.swift */; };
 		CCFCEA122574ECC4000C4B0C /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCE9FE2574ECC3000C4B0C /* String+.swift */; };
@@ -32,14 +34,13 @@
 		CCFCEA1F2574ECC4000C4B0C /* Encodable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCEA0B2574ECC3000C4B0C /* Encodable+.swift */; };
 		CCFCEA202574ECC4000C4B0C /* Collection+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCEA0C2574ECC4000C4B0C /* Collection+.swift */; };
 		CCFCEA212574ECC4000C4B0C /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCEA0D2574ECC4000C4B0C /* String+Localization.swift */; };
-		CCFCEA242574F2BA000C4B0C /* ProfileHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCEA232574F2BA000C4B0C /* ProfileHeaderCell.swift */; };
+		CCFCEA242574F2BA000C4B0C /* EditProfileFixHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCEA232574F2BA000C4B0C /* EditProfileFixHeaderCell.swift */; };
 		CCFCEA2B2574F676000C4B0C /* AppAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCEA2A2574F676000C4B0C /* AppAssets.swift */; };
 		CCFCEA30257511B6000C4B0C /* PayMethodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCEA2F257511B6000C4B0C /* PayMethodCell.swift */; };
 		CCFCEA3425751D54000C4B0C /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCEA3325751D54000C4B0C /* NotificationCell.swift */; };
-		CCFCEA39257687CD000C4B0C /* ProfileOneDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCEA38257687CD000C4B0C /* ProfileOneDataSource.swift */; };
+		CCFCEA39257687CD000C4B0C /* EditProfileFixDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCEA38257687CD000C4B0C /* EditProfileFixDataSource.swift */; };
 		CCFCEA3F25768C4F000C4B0C /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCEA3E25768C4F000C4B0C /* EditProfileViewController.swift */; };
 		CCFCEA42257698BD000C4B0C /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCEA41257698BD000C4B0C /* EditProfileViewModel.swift */; };
-		CCFCEA45257698E5000C4B0C /* EditProfileDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCEA44257698E5000C4B0C /* EditProfileDataSource.swift */; };
 		CCFCEA4825769E1E000C4B0C /* EditProfileCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCEA4725769E1E000C4B0C /* EditProfileCellType.swift */; };
 		CCFCEA4E257780EB000C4B0C /* EditProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCEA4D257780EB000C4B0C /* EditProfileHeaderView.swift */; };
 /* End PBXBuildFile section */
@@ -53,10 +54,12 @@
 		CC370C0D2574D52D009648C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC370C102574D52D009648C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC370C122574D52D009648C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CC370C1C2574D5CE009648C2 /* ProfileOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOneViewController.swift; sourceTree = "<group>"; };
-		CC370C262574D76F009648C2 /* ProfileOneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOneViewModel.swift; sourceTree = "<group>"; };
+		CC370C1C2574D5CE009648C2 /* EditProfileFixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileFixViewController.swift; sourceTree = "<group>"; };
+		CC370C262574D76F009648C2 /* EditProfileFixViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileFixViewModel.swift; sourceTree = "<group>"; };
 		CC4C59A0257A2DE700EC66A4 /* TableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHeader.swift; sourceTree = "<group>"; };
 		CC4C59A3257A378700EC66A4 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		CC4C59AF257A570200EC66A4 /* EditProfileDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileDataSource.swift; sourceTree = "<group>"; };
+		CC8E89D6257A597900433D6C /* EditProfileFixCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileFixCellType.swift; sourceTree = "<group>"; };
 		CCFCE9F52574DEE4000C4B0C /* PersonalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalCell.swift; sourceTree = "<group>"; };
 		CCFCE9FA2574ECC3000C4B0C /* Float+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Float+.swift"; sourceTree = "<group>"; };
 		CCFCE9FE2574ECC3000C4B0C /* String+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
@@ -74,14 +77,13 @@
 		CCFCEA0B2574ECC3000C4B0C /* Encodable+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Encodable+.swift"; sourceTree = "<group>"; };
 		CCFCEA0C2574ECC4000C4B0C /* Collection+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+.swift"; sourceTree = "<group>"; };
 		CCFCEA0D2574ECC4000C4B0C /* String+Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
-		CCFCEA232574F2BA000C4B0C /* ProfileHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderCell.swift; sourceTree = "<group>"; };
+		CCFCEA232574F2BA000C4B0C /* EditProfileFixHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileFixHeaderCell.swift; sourceTree = "<group>"; };
 		CCFCEA2A2574F676000C4B0C /* AppAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssets.swift; sourceTree = "<group>"; };
 		CCFCEA2F257511B6000C4B0C /* PayMethodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayMethodCell.swift; sourceTree = "<group>"; };
 		CCFCEA3325751D54000C4B0C /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
-		CCFCEA38257687CD000C4B0C /* ProfileOneDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOneDataSource.swift; sourceTree = "<group>"; };
+		CCFCEA38257687CD000C4B0C /* EditProfileFixDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileFixDataSource.swift; sourceTree = "<group>"; };
 		CCFCEA3E25768C4F000C4B0C /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		CCFCEA41257698BD000C4B0C /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
-		CCFCEA44257698E5000C4B0C /* EditProfileDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileDataSource.swift; sourceTree = "<group>"; };
 		CCFCEA4725769E1E000C4B0C /* EditProfileCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileCellType.swift; sourceTree = "<group>"; };
 		CCFCEA4D257780EB000C4B0C /* EditProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,7 +134,7 @@
 				CC4C59A3257A378700EC66A4 /* UIColor+.swift */,
 				CCFCE9F92574ECA9000C4B0C /* Extensions */,
 				CCFCEA3B25768C12000C4B0C /* EditProfile */,
-				CC370C292574D84F009648C2 /* ProfileOne */,
+				CC370C292574D84F009648C2 /* EditProfileFix */,
 				CC370C0D2574D52D009648C2 /* Assets.xcassets */,
 				CC370C0F2574D52D009648C2 /* LaunchScreen.storyboard */,
 				CC370C122574D52D009648C2 /* Info.plist */,
@@ -140,21 +142,22 @@
 			path = ExpandingCellBlog;
 			sourceTree = "<group>";
 		};
-		CC370C292574D84F009648C2 /* ProfileOne */ = {
+		CC370C292574D84F009648C2 /* EditProfileFix */ = {
 			isa = PBXGroup;
 			children = (
 				CCFCE9F42574DED2000C4B0C /* Cells */,
-				CC370C1C2574D5CE009648C2 /* ProfileOneViewController.swift */,
-				CC370C262574D76F009648C2 /* ProfileOneViewModel.swift */,
-				CCFCEA38257687CD000C4B0C /* ProfileOneDataSource.swift */,
+				CC370C1C2574D5CE009648C2 /* EditProfileFixViewController.swift */,
+				CC370C262574D76F009648C2 /* EditProfileFixViewModel.swift */,
+				CCFCEA38257687CD000C4B0C /* EditProfileFixDataSource.swift */,
 			);
-			path = ProfileOne;
+			path = EditProfileFix;
 			sourceTree = "<group>";
 		};
 		CCFCE9F42574DED2000C4B0C /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				CCFCEA232574F2BA000C4B0C /* ProfileHeaderCell.swift */,
+				CC8E89D6257A597900433D6C /* EditProfileFixCellType.swift */,
+				CCFCEA232574F2BA000C4B0C /* EditProfileFixHeaderCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -188,7 +191,7 @@
 				CCFCEA3D25768C3B000C4B0C /* Cells */,
 				CCFCEA3E25768C4F000C4B0C /* EditProfileViewController.swift */,
 				CCFCEA41257698BD000C4B0C /* EditProfileViewModel.swift */,
-				CCFCEA44257698E5000C4B0C /* EditProfileDataSource.swift */,
+				CC4C59AF257A570200EC66A4 /* EditProfileDataSource.swift */,
 			);
 			path = EditProfile;
 			sourceTree = "<group>";
@@ -196,9 +199,9 @@
 		CCFCEA3D25768C3B000C4B0C /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				CCFCEA4725769E1E000C4B0C /* EditProfileCellType.swift */,
 				CC4C59A0257A2DE700EC66A4 /* TableViewHeader.swift */,
 				CCFCEA4D257780EB000C4B0C /* EditProfileHeaderView.swift */,
+				CCFCEA4725769E1E000C4B0C /* EditProfileCellType.swift */,
 				CCFCE9F52574DEE4000C4B0C /* PersonalCell.swift */,
 				CCFCEA2F257511B6000C4B0C /* PayMethodCell.swift */,
 				CCFCEA3325751D54000C4B0C /* NotificationCell.swift */,
@@ -343,23 +346,24 @@
 				CCFCEA142574ECC4000C4B0C /* Double+.swift in Sources */,
 				CCFCEA172574ECC4000C4B0C /* UIStackView+.swift in Sources */,
 				CCFCEA1C2574ECC4000C4B0C /* Date+.swift in Sources */,
+				CC8E89D7257A597900433D6C /* EditProfileFixCellType.swift in Sources */,
 				CCFCEA212574ECC4000C4B0C /* String+Localization.swift in Sources */,
 				CCFCEA4825769E1E000C4B0C /* EditProfileCellType.swift in Sources */,
 				CC4C59A4257A378700EC66A4 /* UIColor+.swift in Sources */,
 				CCFCEA202574ECC4000C4B0C /* Collection+.swift in Sources */,
 				CCFCEA182574ECC4000C4B0C /* UIView+.swift in Sources */,
 				CCFCEA3425751D54000C4B0C /* NotificationCell.swift in Sources */,
-				CCFCEA39257687CD000C4B0C /* ProfileOneDataSource.swift in Sources */,
+				CCFCEA39257687CD000C4B0C /* EditProfileFixDataSource.swift in Sources */,
 				CCFCEA3F25768C4F000C4B0C /* EditProfileViewController.swift in Sources */,
 				CCFCEA0E2574ECC4000C4B0C /* Float+.swift in Sources */,
+				CC4C59B0257A570200EC66A4 /* EditProfileDataSource.swift in Sources */,
 				CC4C59A1257A2DE700EC66A4 /* TableViewHeader.swift in Sources */,
 				CCFCE9F62574DEE4000C4B0C /* PersonalCell.swift in Sources */,
 				CCFCEA1D2574ECC4000C4B0C /* HTTPCookieStorage.swift in Sources */,
-				CC370C272574D76F009648C2 /* ProfileOneViewModel.swift in Sources */,
-				CCFCEA45257698E5000C4B0C /* EditProfileDataSource.swift in Sources */,
-				CC370C1D2574D5CE009648C2 /* ProfileOneViewController.swift in Sources */,
+				CC370C272574D76F009648C2 /* EditProfileFixViewModel.swift in Sources */,
+				CC370C1D2574D5CE009648C2 /* EditProfileFixViewController.swift in Sources */,
 				CCFCEA30257511B6000C4B0C /* PayMethodCell.swift in Sources */,
-				CCFCEA242574F2BA000C4B0C /* ProfileHeaderCell.swift in Sources */,
+				CCFCEA242574F2BA000C4B0C /* EditProfileFixHeaderCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  ProfileViewController.swift
+//  EditProfileFixViewController.swift
 //  ExpandingCellBlog
 //
 //  Created by Krešimir Baković on 30/11/2020.
@@ -10,9 +10,9 @@ import RxCocoa
 import RxSwift
 import UIKit
 
-class ProfileOneViewController: UIViewController {
+class EditProfileFixViewController: UIViewController {
     private let disposeBag = DisposeBag()
-    private let viewModel: ProfileOneViewModel
+    private let viewModel: EditProfileFixViewModel
     
     // MARK: - Views
     
@@ -22,7 +22,7 @@ class ProfileOneViewController: UIViewController {
         tableView.dataSource = self
         tableView.separatorStyle = .singleLine
         tableView.backgroundColor = .white
-        tableView.register(ProfileHeaderCell.self, forCellReuseIdentifier: ProfileHeaderCell.identity)
+        tableView.register(EditProfileFixHeaderCell.self, forCellReuseIdentifier: EditProfileFixHeaderCell.identity)
         tableView.register(PersonalCell.self, forCellReuseIdentifier: PersonalCell.identity)
         tableView.register(PayMethodCell.self, forCellReuseIdentifier: PayMethodCell.identity)
         tableView.register(NotificationCell.self, forCellReuseIdentifier: NotificationCell.identity)
@@ -62,9 +62,9 @@ class ProfileOneViewController: UIViewController {
         return item
     }()
     
-    var dataSource = ProfileOneDataSource()
+    var dataSource = EditProfileFixDataSource()
     
-    init(viewModel: ProfileOneViewModel) {
+    init(viewModel: EditProfileFixViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -78,7 +78,7 @@ class ProfileOneViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Edit profile 1"
+        title = "Edit profile fix"
         view.backgroundColor = .white
         setNavigationBar()
         addSubviews()
@@ -113,7 +113,7 @@ class ProfileOneViewController: UIViewController {
 
 // MARK: - UITableViewDelegate
 
-extension ProfileOneViewController: UITableViewDelegate {
+extension EditProfileFixViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch dataSource.flattenDataSource[indexPath.row] {
         case .header(let viewModel):
@@ -126,7 +126,7 @@ extension ProfileOneViewController: UITableViewDelegate {
                 dataSource.flatDataSource()
                 showChildCellsForHeader(with: indexPath)
             }
-            let clickedCell = tableView.cellForRow(at: indexPath) as? ProfileHeaderCell
+            let clickedCell = tableView.cellForRow(at: indexPath) as? EditProfileFixHeaderCell
             clickedCell?.update(viewModel: viewModel, animated: true)
         case .notification(let viewModel):
             let clickedCell = tableView.cellForRow(at: indexPath) as? NotificationCell
@@ -140,7 +140,7 @@ extension ProfileOneViewController: UITableViewDelegate {
 
 // MARK: - UITableViewDataSource
 
-extension ProfileOneViewController: UITableViewDataSource {
+extension EditProfileFixViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -152,7 +152,7 @@ extension ProfileOneViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch dataSource.flattenDataSource[indexPath.row] {
         case .header(let viewModel):
-            let cell: ProfileHeaderCell = tableView.dequeueCellAtIndexPath(indexPath: indexPath)
+            let cell: EditProfileFixHeaderCell = tableView.dequeueCellAtIndexPath(indexPath: indexPath)
             cell.update(viewModel: viewModel, animated: false)
             return cell
         case .notification(let viewModel):

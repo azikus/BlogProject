@@ -1,13 +1,14 @@
 //
-//  EditProfileCellType.swift
+//  EditProfileFixCellType.swift
 //  ExpandingCellBlog
 //
-//  Created by Krešimir Baković on 01/12/2020.
+//  Created by Krešimir Baković on 04/12/2020.
 //
 
 import Foundation
 
-enum EditProfileCellType {
+enum EditProfileFixCellType {
+    case header(EditProfileFixHeaderCellViewModel)
     case personal(PersonalCellViewModel)
     case payMethod(PayMethodCellViewModel)
     case notification(NotificationCellViewModel)

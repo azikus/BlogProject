@@ -1,5 +1,5 @@
 //
-//  BadProfileHeader.swift
+//  EditProfileHeaderView.swift
 //  ExpandingCellBlog
 //
 //  Created by Krešimir Baković on 02/12/2020.

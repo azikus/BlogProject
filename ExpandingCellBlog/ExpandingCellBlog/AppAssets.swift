@@ -19,6 +19,11 @@ enum AppAssets: String {
     case applePay
     case googlePay
     case masterCard
+    case user
+    case camera
+    case dots
+    case search
+    case hearth
     
     var image: UIImage? {
         return UIImage(named: rawValue)

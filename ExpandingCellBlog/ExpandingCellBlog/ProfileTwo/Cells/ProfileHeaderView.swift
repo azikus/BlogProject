@@ -36,7 +36,7 @@ class ProfileHeaderView: UITableViewHeaderFooterView {
         let label = UILabel()
         label.numberOfLines = 0
         label.textColor = .black
-        label.font = .systemFont(ofSize: 22, weight: .semibold)
+        label.font = .systemFont(ofSize: 20, weight: .semibold)
         
         return label
     }()
@@ -51,7 +51,7 @@ class ProfileHeaderView: UITableViewHeaderFooterView {
     
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
-        contentView.backgroundColor = .lightGray
+        contentView.backgroundColor = .gray247
         self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
         addSubviews()
         setConstraints()
@@ -76,10 +76,10 @@ class ProfileHeaderView: UITableViewHeaderFooterView {
         }
         
         titleLabel.snp.remakeConstraints {
-            $0.top.equalToSuperview().offset(10)
+            $0.top.equalToSuperview().offset(22)
             $0.leading.equalToSuperview().offset(20)
             $0.trailing.equalTo(arrowImageView.snp.leading).offset(-20)
-            $0.bottom.equalToSuperview().offset(-10)
+            $0.bottom.equalToSuperview().offset(-22)
         }
     }
     

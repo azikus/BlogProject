@@ -56,9 +56,10 @@ class PayMethodCell: UITableViewCell {
 
     func setConstraints() {
         methodImageView.snp.remakeConstraints {
-            $0.top.bottom.equalToSuperview().inset(15)
+            $0.top.bottom.equalToSuperview().inset(20)
             $0.leading.equalToSuperview().offset(25)
             $0.height.equalTo(25)
+            $0.width.equalTo(100)
         }
         
         addMethodButton.snp.remakeConstraints {

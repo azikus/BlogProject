@@ -22,7 +22,7 @@ class PersonalCell: UITableViewCell {
         let label = UILabel()
         label.numberOfLines = 0
         label.textColor = .black
-        label.font = .systemFont(ofSize: 14, weight: .bold)
+        label.font = .systemFont(ofSize: 14, weight: .semibold)
         
         return label
     }()
@@ -69,7 +69,7 @@ class PersonalCell: UITableViewCell {
     func setConstraints() {
         changeButton.snp.remakeConstraints {
             $0.trailing.equalToSuperview().offset(-20)
-            $0.top.bottom.equalToSuperview().inset(10)
+            $0.top.bottom.equalToSuperview().inset(15)
             $0.height.equalTo(30)
             $0.width.equalTo(70)
         }

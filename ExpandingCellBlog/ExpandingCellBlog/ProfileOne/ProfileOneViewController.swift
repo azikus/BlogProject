@@ -26,11 +26,40 @@ class ProfileOneViewController: UIViewController {
         tableView.register(PersonalCell.self, forCellReuseIdentifier: PersonalCell.identity)
         tableView.register(PayMethodCell.self, forCellReuseIdentifier: PayMethodCell.identity)
         tableView.register(NotificationCell.self, forCellReuseIdentifier: NotificationCell.identity)
+        tableView.tableHeaderView = TableViewHeader()
         tableView.tableFooterView = UIView(frame: .zero)
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = UITableView.automaticDimension
         
         return tableView
+    }()
+    
+    lazy var searchBarButton: UIBarButtonItem = {
+        let item = UIBarButtonItem(image: AppAssets.search.image, style: .plain, target: self, action: nil)
+        item.tintColor = .black
+        
+        return item
+    }()
+    
+    lazy var cameraBarButton: UIBarButtonItem = {
+        let item = UIBarButtonItem(image: AppAssets.camera.image, style: .plain, target: self, action: nil)
+        item.tintColor = .black
+        
+        return item
+    }()
+    
+    lazy var dotsBarButton: UIBarButtonItem = {
+        let item = UIBarButtonItem(image: AppAssets.dots.image, style: .plain, target: self, action: nil)
+        item.tintColor = .black
+        
+        return item
+    }()
+    
+    lazy var hearthBarButton: UIBarButtonItem = {
+        let item = UIBarButtonItem(image: AppAssets.hearth.image, style: .plain, target: self, action: nil)
+        item.tintColor = .black
+        
+        return item
     }()
     
     var dataSource = ProfileOneDataSource()
@@ -49,9 +78,16 @@ class ProfileOneViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Edit profile 1"
         view.backgroundColor = .white
+        setNavigationBar()
         addSubviews()
         setConstraints()
+    }
+    
+    private func setNavigationBar() {
+        navigationItem.leftBarButtonItems = [searchBarButton, cameraBarButton]
+        navigationItem.rightBarButtonItems = [dotsBarButton, hearthBarButton]
     }
     
     private func addSubviews() {

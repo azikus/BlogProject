@@ -35,7 +35,7 @@ class ProfileHeaderCell: UITableViewCell {
         let label = UILabel()
         label.numberOfLines = 0
         label.textColor = .black
-        label.font = .systemFont(ofSize: 22, weight: .semibold)
+        label.font = .systemFont(ofSize: 20, weight: .semibold)
         
         return label
     }()
@@ -49,7 +49,7 @@ class ProfileHeaderCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        contentView.backgroundColor = .lightGray
+        contentView.backgroundColor = .gray247
         selectionStyle = .none
         addSubviews()
         setConstraints()
@@ -74,10 +74,10 @@ class ProfileHeaderCell: UITableViewCell {
         }
         
         titleLabel.snp.remakeConstraints {
-            $0.top.equalToSuperview().offset(10)
+            $0.top.equalToSuperview().offset(22)
             $0.leading.equalToSuperview().offset(20)
             $0.trailing.equalTo(arrowImageView.snp.leading).offset(-20)
-            $0.bottom.equalToSuperview().offset(-10)
+            $0.bottom.equalToSuperview().offset(-22)
         }
     }
     

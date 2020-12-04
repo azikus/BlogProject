@@ -62,7 +62,7 @@ class NotificationCell: UITableViewCell {
         
         titleLabel.snp.remakeConstraints {
             $0.leading.equalTo(checkBoxImageView.snp.trailing).offset(6)
-            $0.top.bottom.equalToSuperview().inset(10)
+            $0.top.bottom.equalToSuperview().inset(18)
             $0.trailing.equalToSuperview().offset(-20)
         }
     }

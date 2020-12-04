@@ -13,6 +13,8 @@
 		CC370C112574D52D009648C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC370C0F2574D52D009648C2 /* LaunchScreen.storyboard */; };
 		CC370C1D2574D5CE009648C2 /* ProfileOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC370C1C2574D5CE009648C2 /* ProfileOneViewController.swift */; };
 		CC370C272574D76F009648C2 /* ProfileOneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC370C262574D76F009648C2 /* ProfileOneViewModel.swift */; };
+		CC4C59A1257A2DE700EC66A4 /* TableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4C59A0257A2DE700EC66A4 /* TableViewHeader.swift */; };
+		CC4C59A4257A378700EC66A4 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4C59A3257A378700EC66A4 /* UIColor+.swift */; };
 		CCFCE9F62574DEE4000C4B0C /* PersonalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCE9F52574DEE4000C4B0C /* PersonalCell.swift */; };
 		CCFCEA0E2574ECC4000C4B0C /* Float+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCE9FA2574ECC3000C4B0C /* Float+.swift */; };
 		CCFCEA122574ECC4000C4B0C /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFCE9FE2574ECC3000C4B0C /* String+.swift */; };
@@ -53,6 +55,8 @@
 		CC370C122574D52D009648C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC370C1C2574D5CE009648C2 /* ProfileOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOneViewController.swift; sourceTree = "<group>"; };
 		CC370C262574D76F009648C2 /* ProfileOneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOneViewModel.swift; sourceTree = "<group>"; };
+		CC4C59A0257A2DE700EC66A4 /* TableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHeader.swift; sourceTree = "<group>"; };
+		CC4C59A3257A378700EC66A4 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		CCFCE9F52574DEE4000C4B0C /* PersonalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalCell.swift; sourceTree = "<group>"; };
 		CCFCE9FA2574ECC3000C4B0C /* Float+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Float+.swift"; sourceTree = "<group>"; };
 		CCFCE9FE2574ECC3000C4B0C /* String+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
@@ -123,9 +127,10 @@
 		CC370C032574D529009648C2 /* ExpandingCellBlog */ = {
 			isa = PBXGroup;
 			children = (
-				CCFCE9F92574ECA9000C4B0C /* Extensions */,
 				CC370C042574D529009648C2 /* AppDelegate.swift */,
 				CCFCEA2A2574F676000C4B0C /* AppAssets.swift */,
+				CC4C59A3257A378700EC66A4 /* UIColor+.swift */,
+				CCFCE9F92574ECA9000C4B0C /* Extensions */,
 				CCFCEA3B25768C12000C4B0C /* ProfileTwo */,
 				CC370C292574D84F009648C2 /* ProfileOne */,
 				CC370C0D2574D52D009648C2 /* Assets.xcassets */,
@@ -192,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				CCFCEA4725769E1E000C4B0C /* ProfileTwoCellType.swift */,
+				CC4C59A0257A2DE700EC66A4 /* TableViewHeader.swift */,
 				CCFCEA4D257780EB000C4B0C /* ProfileHeaderView.swift */,
 				CCFCE9F52574DEE4000C4B0C /* PersonalCell.swift */,
 				CCFCEA2F257511B6000C4B0C /* PayMethodCell.swift */,
@@ -339,12 +345,14 @@
 				CCFCEA1C2574ECC4000C4B0C /* Date+.swift in Sources */,
 				CCFCEA212574ECC4000C4B0C /* String+Localization.swift in Sources */,
 				CCFCEA4825769E1E000C4B0C /* ProfileTwoCellType.swift in Sources */,
+				CC4C59A4257A378700EC66A4 /* UIColor+.swift in Sources */,
 				CCFCEA202574ECC4000C4B0C /* Collection+.swift in Sources */,
 				CCFCEA182574ECC4000C4B0C /* UIView+.swift in Sources */,
 				CCFCEA3425751D54000C4B0C /* NotificationCell.swift in Sources */,
 				CCFCEA39257687CD000C4B0C /* ProfileOneDataSource.swift in Sources */,
 				CCFCEA3F25768C4F000C4B0C /* ProfileTwoViewController.swift in Sources */,
 				CCFCEA0E2574ECC4000C4B0C /* Float+.swift in Sources */,
+				CC4C59A1257A2DE700EC66A4 /* TableViewHeader.swift in Sources */,
 				CCFCE9F62574DEE4000C4B0C /* PersonalCell.swift in Sources */,
 				CCFCEA1D2574ECC4000C4B0C /* HTTPCookieStorage.swift in Sources */,
 				CC370C272574D76F009648C2 /* ProfileOneViewModel.swift in Sources */,

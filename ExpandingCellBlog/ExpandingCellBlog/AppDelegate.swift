@@ -18,8 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let profileOneViewModel = ProfileOneViewModel()
         let profileOneViewController = ProfileOneViewController(viewModel: profileOneViewModel)
         
-        let profileTwoViewModel = ProfileTwoViewModel()
-        let profileTwoViewController = ProfileTwoViewController(viewModel: profileTwoViewModel)
+        let profileTwoViewModel = EditProfileViewModel()
+        let profileTwoViewController = EditProfileViewController(viewModel: profileTwoViewModel)
         
         let tabBarViewController = UITabBarController()
         tabBarViewController.tabBar.tintColor = .black
@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         tabBarViewController.viewControllers = [profileOneNavigationController, profileTwoNavigationController]
         
-        window?.rootViewController = tabBarViewController
+        window?.rootViewController = profileTwoNavigationController
         window?.makeKeyAndVisible()
         
         return true

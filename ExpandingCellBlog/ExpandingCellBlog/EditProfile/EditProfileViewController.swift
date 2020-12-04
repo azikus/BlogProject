@@ -8,9 +8,9 @@
 import UIKit
 import RxSwift
 
-class ProfileTwoViewController: UIViewController {
+class EditProfileViewController: UIViewController {
     private let disposeBag = DisposeBag()
-    private let viewModel: ProfileTwoViewModel
+    private let viewModel: EditProfileViewModel
     
     // MARK: - Views
     
@@ -59,9 +59,9 @@ class ProfileTwoViewController: UIViewController {
         return item
     }()
     
-    var dataSource = ProfileTwoDataSource()
+    var dataSource = EditProfileDataSource()
     
-    init(viewModel: ProfileTwoViewModel) {
+    init(viewModel: EditProfileViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -75,7 +75,7 @@ class ProfileTwoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Edit profile 2"
+        title = "Edit profile"
         view.backgroundColor = .white
         setNavigationBar()
         addSubviews()
@@ -98,7 +98,7 @@ class ProfileTwoViewController: UIViewController {
         }
     }
     
-    private func indexOfHeader(header: ProfileHeaderViewModel) -> Int {
+    private func indexOfHeader(header: EditProfileHeaderViewModel) -> Int {
         for (index, dataSourceHeader) in dataSource.data.enumerated() {
             if header == dataSourceHeader {
                 return index
@@ -120,7 +120,7 @@ class ProfileTwoViewController: UIViewController {
 
 // MARK: - UITableViewDelegate
 
-extension ProfileTwoViewController: UITableViewDelegate {
+extension EditProfileViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch dataSource.data[indexPath.section].cells[indexPath.row] {
         case.notification(let viewModel):
@@ -135,7 +135,7 @@ extension ProfileTwoViewController: UITableViewDelegate {
 
 // MARK: - UITableViewDataSource
 
-extension ProfileTwoViewController: UITableViewDataSource {
+extension EditProfileViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return dataSource.data.count
     }
@@ -149,7 +149,7 @@ extension ProfileTwoViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = ProfileHeaderView()
+        let header = EditProfileHeaderView()
         header.delegate = self
         header.update(viewModel: dataSource.data[section])
         return header
@@ -175,8 +175,8 @@ extension ProfileTwoViewController: UITableViewDataSource {
 
 // MARK: - ProfileHeaderViewDelegate
 
-extension ProfileTwoViewController: ProfileHeaderViewDelegate {
-    func toggleSection(for header: ProfileHeaderView) {
+extension EditProfileViewController: EditProfileHeaderViewDelegate {
+    func toggleSection(for header: EditProfileHeaderView) {
         guard let viewModel = header.viewModel else { return }
         let headerIndex = indexOfHeader(header: viewModel)
         if viewModel.isExpanded {

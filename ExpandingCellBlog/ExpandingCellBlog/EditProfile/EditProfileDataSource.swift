@@ -7,8 +7,8 @@
 
 import Foundation
 
-class ProfileTwoDataSource {
-    var data: [ProfileHeaderViewModel] = [ProfileHeaderViewModel(titleText: "Personal",
+class EditProfileDataSource {
+    var data: [EditProfileHeaderViewModel] = [EditProfileHeaderViewModel(titleText: "Personal",
                                                                  cells: [.personal(PersonalCellViewModel(titleText: "Username:", descriptionText: "Kresimir")),
                                                                          .personal(PersonalCellViewModel(titleText: "Email:", descriptionText: "kresimir@gmail.com")),
                                                                          .personal(PersonalCellViewModel(titleText: "Password:", descriptionText: "*********")),
@@ -19,7 +19,7 @@ class ProfileTwoDataSource {
                                                                          .personal(PersonalCellViewModel(titleText: "Gender:", descriptionText: "Male")),
                                                                          .personal(PersonalCellViewModel(titleText: "Nickname:", descriptionText: "Soksijada"))],
                                                                  isExpanded: false),
-                                          ProfileHeaderViewModel(titleText: "Payout Method",
+                                              EditProfileHeaderViewModel(titleText: "Payout Method",
                                                                  cells: [.payMethod(PayMethodCellViewModel(image: AppAssets.aircash.image)),
                                                                          .payMethod(PayMethodCellViewModel(image: AppAssets.applePay.image)),
                                                                          .payMethod(PayMethodCellViewModel(image: AppAssets.googlePay.image)),
@@ -29,7 +29,7 @@ class ProfileTwoDataSource {
                                                                          .payMethod(PayMethodCellViewModel(image: AppAssets.bitcoin.image)),
                                                                          .payMethod(PayMethodCellViewModel(image: AppAssets.masterCard.image))],
                                                                  isExpanded: false),
-                                          ProfileHeaderViewModel(titleText: "Notifications",
+                                              EditProfileHeaderViewModel(titleText: "Notifications",
                                                                  cells: [.notification(NotificationCellViewModel(titleText: "Email", isEnabled: false)),
                                                                          .notification(NotificationCellViewModel(titleText: "Push notifications", isEnabled: true)),
                                                                          .notification(NotificationCellViewModel(titleText: "Phone calls", isEnabled: false)),

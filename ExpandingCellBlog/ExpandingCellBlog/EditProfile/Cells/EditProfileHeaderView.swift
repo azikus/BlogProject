@@ -8,29 +8,29 @@
 import UIKit
 import RxSwift
 
-protocol ProfileHeaderViewDelegate {
-    func toggleSection(for header: ProfileHeaderView)
+protocol EditProfileHeaderViewDelegate {
+    func toggleSection(for header: EditProfileHeaderView)
 }
 
-class ProfileHeaderViewModel: Equatable {
+class EditProfileHeaderViewModel: Equatable {
     let titleText: String
-    let cells: [ProfileTwoCellType]
+    let cells: [EditProfileCellType]
     var isExpanded: Bool
     
-    init(titleText: String, cells: [ProfileTwoCellType], isExpanded: Bool) {
+    init(titleText: String, cells: [EditProfileCellType], isExpanded: Bool) {
         self.titleText = titleText
         self.cells = cells
         self.isExpanded = isExpanded
     }
     
-    static func == (lhs: ProfileHeaderViewModel, rhs: ProfileHeaderViewModel) -> Bool {
+    static func == (lhs: EditProfileHeaderViewModel, rhs: EditProfileHeaderViewModel) -> Bool {
         return lhs.titleText == rhs.titleText && lhs.cells.count == rhs.cells.count
     }
 }
 
-class ProfileHeaderView: UITableViewHeaderFooterView {
-    var delegate: ProfileHeaderViewDelegate?
-    var viewModel: ProfileHeaderViewModel?
+class EditProfileHeaderView: UITableViewHeaderFooterView {
+    var delegate: EditProfileHeaderViewDelegate?
+    var viewModel: EditProfileHeaderViewModel?
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()
@@ -83,7 +83,7 @@ class ProfileHeaderView: UITableViewHeaderFooterView {
         }
     }
     
-    func update(viewModel: ProfileHeaderViewModel) {
+    func update(viewModel: EditProfileHeaderViewModel) {
         titleLabel.text = viewModel.titleText
         self.viewModel = viewModel
     }

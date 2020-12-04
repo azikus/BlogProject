@@ -7,6 +7,6 @@
 
 import Foundation
 
-class ProfileTwoViewModel {
+class EditProfileViewModel {
     init() {}
 }

@@ -14,17 +14,17 @@ protocol EditProfileHeaderViewDelegate {
 
 class EditProfileHeaderViewModel: Equatable {
     let titleText: String
-    let cells: [EditProfileCellType]
+    let items: [EditProfileCellType]
     var isExpanded: Bool
     
     init(titleText: String, cells: [EditProfileCellType], isExpanded: Bool) {
         self.titleText = titleText
-        self.cells = cells
+        self.items = cells
         self.isExpanded = isExpanded
     }
     
     static func == (lhs: EditProfileHeaderViewModel, rhs: EditProfileHeaderViewModel) -> Bool {
-        return lhs.titleText == rhs.titleText && lhs.cells.count == rhs.cells.count
+        return lhs.titleText == rhs.titleText && lhs.items.count == rhs.items.count
     }
 }
 

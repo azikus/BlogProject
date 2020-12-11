@@ -45,7 +45,7 @@ class EditProfileDataSource {
     
     func findChildIndexPathsOfHeader(with headerIndex: Int) -> [IndexPath] {
         var childrenIndexPaths: [IndexPath] = []
-        let numberOfChildern = data[headerIndex].cells.count
+        let numberOfChildern = data[headerIndex].items.count
         for index in 0..<numberOfChildern {
             childrenIndexPaths.append(IndexPath(item: index, section: headerIndex))
         }

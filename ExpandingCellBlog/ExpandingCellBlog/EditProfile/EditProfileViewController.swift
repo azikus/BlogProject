@@ -98,13 +98,13 @@ class EditProfileViewController: UIViewController {
         }
     }
     
-    private func indexOfHeader(header: EditProfileHeaderViewModel) -> Int {
+    private func indexOfHeader(header: EditProfileHeaderViewModel) -> Int? {
         for (index, dataSourceHeader) in dataSource.data.enumerated() {
             if header == dataSourceHeader {
                 return index
             }
         }
-        return 0
+        return nil
     }
     
     private func hideChildCellsForHeader(with index: Int) {
@@ -122,7 +122,7 @@ class EditProfileViewController: UIViewController {
 
 extension EditProfileViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch dataSource.data[indexPath.section].cells[indexPath.row] {
+        switch dataSource.data[indexPath.section].items[indexPath.row] {
         case.notification(let viewModel):
             let clickedCell = tableView.cellForRow(at: indexPath) as? NotificationCell
             viewModel.isEnabled.toggle()
@@ -142,7 +142,7 @@ extension EditProfileViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if dataSource.data[section].isExpanded {
-            return dataSource.data[section].cells.count
+            return dataSource.data[section].items.count
         } else {
             return 0
         }
@@ -156,7 +156,7 @@ extension EditProfileViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch dataSource.data[indexPath.section].cells[indexPath.row] {
+        switch dataSource.data[indexPath.section].items[indexPath.row] {
         case .notification(let viewModel):
             let cell: NotificationCell = tableView.dequeueCellAtIndexPath(indexPath: indexPath)
             cell.update(viewModel: viewModel)
@@ -177,8 +177,9 @@ extension EditProfileViewController: UITableViewDataSource {
 
 extension EditProfileViewController: EditProfileHeaderViewDelegate {
     func toggleSection(for header: EditProfileHeaderView) {
-        guard let viewModel = header.viewModel else { return }
-        let headerIndex = indexOfHeader(header: viewModel)
+        guard let viewModel = header.viewModel, let headerIndex = indexOfHeader(header: viewModel) else {
+            return
+        }
         if viewModel.isExpanded {
             viewModel.isExpanded = false
             hideChildCellsForHeader(with: headerIndex)
